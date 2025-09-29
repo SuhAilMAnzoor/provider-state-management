@@ -44,3 +44,13 @@ class _WhyProviderScreenState extends State<WhyProviderScreen> {
     );
   }
 }
+       // to know how this is going to kill your device performance 
+       // suppose this a facebook app like have mallions of users 
+       //  will you understand how heavy load is this every second 
+       // all widgets of entire screen will rebuild every second
+       // so thats's why we need state managment like provider 
+       // to rebuild only the portion of ui which we want like in this case
+       // time and counter value rest of widgets will not rebuild to avoid 
+       // pressure on ram and performance 
+       // make smooth experience of user 
+       // no crash, no slow experience will user face
