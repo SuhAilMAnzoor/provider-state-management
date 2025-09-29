@@ -4,7 +4,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key}); // but error come here what it says read it
   // try to remove const here and before calling HomeScreen in main.dart file
 
-  // Stateless Widgets are mutable , they never change their state
+  // Stateless Widgets are immutable , they never change their state
   int x =
       0; // first you go down in floating action button then come here, You removed final
   @override
