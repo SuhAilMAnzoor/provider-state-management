@@ -5,6 +5,8 @@ import 'package:provider_state_management/why_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_state_management/provider/screens/counter_screen.dart';
 import 'package:provider_state_management/provider/counter_provider.dart';
+import 'package:provider_state_management/provider/slider_and_containers_proivder.dart';
+import 'package:provider_state_management/provider/screens/slider_and_containers_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,14 +18,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => CountProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => CounterProvider()),
+        ChangeNotifierProvider(create: (_) => ExampleTwoProvider()),
+      ],
       child: MaterialApp(
         title: 'Start with Provider State Management',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: CounterScreen(),
+        home: SliderAndContainers(),
       ),
     );
   }
