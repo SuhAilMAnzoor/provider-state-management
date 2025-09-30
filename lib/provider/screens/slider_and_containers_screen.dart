@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_state_management/provider/screens/slider_and_containers_screen.dart';
+import 'package:provider_state_management/provider/slider_and_containers_provider.dart';
 
 class SliderAndContainers extends StatefulWidget {
   const SliderAndContainers({super.key});
