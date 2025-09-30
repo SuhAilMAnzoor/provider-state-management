@@ -16,7 +16,7 @@ class _CounterScreenState extends State<CounterScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    final countProvider = Provider.of<CountProvider>(context, listen: false);
+    final countProvider = Provider.of<CounterProvider>(context, listen: false);
     Timer.periodic(Duration(seconds: 2), (timer) {
       countProvider.addcount();
     });
@@ -29,7 +29,7 @@ class _CounterScreenState extends State<CounterScreen> {
     return Scaffold(
       appBar: AppBar(title: Text("Counter Example in Provider")),
       body: Center(
-        child: Consumer<CountProvider>(
+        child: Consumer<CounterProvider>(
           builder: (context, value, child) {
             print("only this widget will rebuild");
             return Text(value.count.toString(), style: TextStyle(fontSize: 50));
