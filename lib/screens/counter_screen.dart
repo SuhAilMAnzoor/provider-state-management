@@ -14,7 +14,7 @@ class CounterScreen extends StatefulWidget {
 class _CounterScreenState extends State<CounterScreen> {
   @override
   void initState() {
-    // TODO: implement initState
+    // TODO: implement
     super.initState();
     final countProvider = Provider.of<CounterProvider>(context, listen: false);
     Timer.periodic(Duration(seconds: 2), (timer) {
