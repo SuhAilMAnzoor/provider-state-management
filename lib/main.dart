@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:provider_state_management/home_screen.dart';
-import 'package:provider_state_management/stateful_widget_screen.dart';
-import 'package:provider_state_management/why_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_state_management/provider/screens/counter_screen.dart';
 import 'package:provider_state_management/provider/counter_provider.dart';
-import 'package:provider_state_management/provider/screens/slider_and_containers_screen.dart';
 import 'package:provider_state_management/provider/slider_and_containers_provider.dart';
+import 'package:provider_state_management/screens/counter_screen.dart';
+import 'package:provider_state_management/screens/slider_and_containers_screen.dart';
+
+// Before Coming to this repo please first understand why we need state Management
+// Like Provider, in StatefulWidget we have SetState Method to rebuild the UI
+// Then Why State Managmement and why not setState, so for that you need to go
+// in My Repo on github before-provider-using-setstate-rebuild-ui
+// in this i have discussed stateless and stateful widget why we need state management
+// its better to work with that repo first then come here
 
 void main() {
   runApp(const MyApp());
